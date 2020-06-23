@@ -7,16 +7,17 @@ import useSiteMetaData from "../hooks/use-sitemetadata";
 import useContentfulPost from "../hooks/use-contentfulpost";
 import useContentfulPerson from "../hooks/use-contentfulperson";
 
-const RootIndex = ({ data }) => {
+const RootIndex = () => {
   const posts = useContentfulPost();
-  const author = useContentfulPerson({ authorID: "15jwOBqpxqSAOy2eOO4S0m" });
+  const { persons: author } = useContentfulPerson({
+    authorID: "15jwOBqpxqSAOy2eOO4S0m",
+  });
   const { title } = useSiteMetaData();
-
   return (
     <Layout>
       <div style={{ background: "#fff" }}>
         <Helmet title={title} />
-        <Hero data={author.persons} />
+        <Hero data={author} />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
