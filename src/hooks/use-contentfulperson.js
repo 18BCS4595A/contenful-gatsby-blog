@@ -13,13 +13,8 @@ const useContentfulPerson = ({ authorID }) => {
               }
               title
               heroImage: image {
-                fluid(
-                  maxWidth: 1180
-                  maxHeight: 480
-                  resizingBehavior: PAD
-                  background: "rgb:000000"
-                ) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                fluid {
+                  ...GatsbyContentfulFluid_withWebp
                 }
               }
             }

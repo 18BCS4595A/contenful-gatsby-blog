@@ -15,6 +15,11 @@ export default () => (
           Blog
         </Link>
       </li>
+      <li className={styles.navigationItem}>
+        <Link activeClassName={styles.navigationItemActive} to="/about">
+          About
+        </Link>
+      </li>
     </ul>
   </nav>
 );

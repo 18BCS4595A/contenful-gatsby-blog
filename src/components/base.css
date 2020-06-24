@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Noto+Sans+JP&display=swap");
+/* ! for  signature purpose */
+@import url("https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap");
+
 @font-face {
-  font-family: "Avenir";
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-style: normal;
   src: url("/avenir-400.woff2") format("woff2");
@@ -13,11 +17,8 @@ body {
   color: #373f49;
   background: #eee;
   margin: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 h1,
@@ -25,6 +26,7 @@ h2,
 h3 {
   font-size: 2em;
   font-weight: normal;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 a {
@@ -34,7 +36,7 @@ a {
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
-  padding: 5vmin 0;
+  padding: 1.2rem;
 }
 
 /**
@@ -61,8 +63,10 @@ a {
 /**
  *
  */
+
 .list-inline {
   margin: 0;
+
   padding: 0;
   list-style: none;
 }

@@ -12,7 +12,7 @@ const useContentfulPost = () => {
             tags
             heroImage {
               fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-                ...GatsbyContentfulFluid_tracedSVG
+                ...GatsbyContentfulFluid_withWebp
               }
             }
             description {
