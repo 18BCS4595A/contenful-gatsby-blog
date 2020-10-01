@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
 
+/* this component is a custom hook for sourcing graphql data on contentfull data */
 const useContentfulPost = () => {
+  /* storing the sourced infromation into data variable */
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
@@ -25,7 +27,8 @@ const useContentfulPost = () => {
       }
     }
   `);
+  /* returning the all the post informaation sourced to the higher component */
   return data.allContentfulBlogPost.posts;
 };
-
+/* exporting the hook */
 export default useContentfulPost;
