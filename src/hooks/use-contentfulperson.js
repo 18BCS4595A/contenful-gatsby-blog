@@ -1,6 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
 
+/* this component is a custom hook for pulling out the author details */
 const useContentfulPerson = ({ authorID }) => {
+  /* usign a hook from gatsby to source graphql and find the author based on the author id recieved */
   const data = useStaticQuery(
     graphql`
       query($authorID: String) {
@@ -24,6 +26,7 @@ const useContentfulPerson = ({ authorID }) => {
     `,
     { authorID: authorID }
   );
+  /* cleaning the recieved data and serving the all details of person as result of the author id passed TODO:if user is not found return relevant message*/
   return data.allContentfulPerson.personData[0];
 };
 
